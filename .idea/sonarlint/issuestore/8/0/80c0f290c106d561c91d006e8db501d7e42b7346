@@ -1,0 +1,13 @@
+
+Ã
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥×¹<8ÕŸ±’å1J$2dc3958d-b553-4337-85b6-db0a15f9deaf
+£
+java:S1450"[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(¥åˆüÿÿÿÿ8ØŸ±’å1J$804512df-4ddc-4cbc-9cc3-39e761d3a8b9
+—
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡8ØŸ±’å1J$8ae018c3-2848-49a3-b463-de95f244ef6d
+œ
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ðÑœýÿÿÿÿ8ÙŸ±’å1J$1e3fbe4b-f257-4c5e-9b8d-933b2d8f273e
+~	java:S125W"<This block of commented-out lines of code should be removed.( ÆüÖ8åŸ±’å1J$2b8f88e9-fe62-47de-a89a-95ada9f6af30
+r	java:S106o"+Replace this use of System.out by a logger.(©²²éúÿÿÿÿ8ðŸ±’å1J$c85b8787-1f47-43b1-abf0-88a86b301142
+m	java:S106r"+Replace this use of System.out by a logger.(¤Õï«8ñŸ±’å1J$70866ec0-81b0-43b4-b111-4e6b4b208004
+s	java:S106¯"+Replace this use of System.out by a logger.(Éâ…ºýÿÿÿÿ8üŸ±’å1J$51d00cd6-a8df-4d63-b014-f2976477551e

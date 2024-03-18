@@ -30,7 +30,7 @@ public class ModifyProductController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private ObservableList<Part> addParts = FXCollections.observableArrayList();
-    private String errorMessage = new String();
+    private String errorMessage;
     private int productId;
     private int productIndex = getModifyProductIndex();
 
@@ -206,11 +206,13 @@ public class ModifyProductController implements Initializable, Controller {
         alert.setHeaderText("Confirm Cancelation");
         alert.setContentText("Are you sure you want to cancel modifying product?");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
-            System.out.println("Ok selected. Product modification canceled.");
-            displayScene(event, "/fxml/MainScreen.fxml");
-        } else {
-            System.out.println("Cancel clicked.");
+        if(result.isPresent()) {
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Ok selected. Product modification canceled.");
+                displayScene(event, "/fxml/MainScreen.fxml");
+            } else {
+                System.out.println("Cancel clicked.");
+            }
         }
     }
 

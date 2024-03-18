@@ -32,9 +32,7 @@ public class InventoryRepository {
 					listP.add(part);
 			}
 			br.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+		}  catch (IOException e) {
 			e.printStackTrace();
 		}
 		inventory.setAllParts(listP);
@@ -85,9 +83,7 @@ public class InventoryRepository {
 					listP.add(product);
 			}
 			br.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+		}  catch (IOException e) {
 			e.printStackTrace();
 		}
 		inventory.setProducts(listP);

@@ -29,10 +29,9 @@ public class ModifyPartController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private int partIndex= getModifyPartIndex();
-    private String errorMessage = new String();
+    private String errorMessage;
     private boolean isOutsourced;
     private int partId;
-
     private InventoryService service;
     
     @FXML
@@ -115,7 +114,6 @@ public class ModifyPartController implements Initializable, Controller {
     private void displayScene(ActionEvent event, String source) throws IOException {
         stage = (Stage)((Button)event.getSource()).getScene().getWindow();
         FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
         scene = loader.load();
         Controller ctrl=loader.getController();
         ctrl.setService(service);
@@ -159,11 +157,13 @@ public class ModifyPartController implements Initializable, Controller {
         alert.setHeaderText("Confirm Cancellation");
         alert.setContentText("Are you sure you want to cancel modifying part " + nameTxt.getText() + "?");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
-            System.out.println("Ok selected. Part modification cancelled.");
-            displayScene(event, "/fxml/MainScreen.fxml");
-        } else {
-            System.out.println("Cancel clicked. Please complete part modification.");
+        if(result.isPresent()) {
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Ok selected. Part modification cancelled.");
+                displayScene(event, "/fxml/MainScreen.fxml");
+            } else {
+                System.out.println("Cancel clicked. Please complete part modification.");
+            }
         }
     }
 
@@ -193,7 +193,7 @@ public class ModifyPartController implements Initializable, Controller {
                 alert.setContentText(errorMessage);
                 alert.showAndWait();
             } else {
-                if(isOutsourced == true) {
+                if(isOutsourced) {
                     service.updateOutsourcedPart(partIndex, Integer.parseInt(partId), name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), partDynamicValue);
                 } else {
                     service.updateInhousePart(partIndex, Integer.parseInt(partId), name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), Integer.parseInt(partDynamicValue));

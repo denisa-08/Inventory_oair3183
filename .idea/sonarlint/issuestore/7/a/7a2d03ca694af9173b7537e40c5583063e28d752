@@ -1,0 +1,14 @@
+
+Â
+java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ùÍï”ùÿÿÿÿJ$a0754e72-4fa9-47ef-9dcc-edb55c5960b0
+œ
+java:S1450"[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(¥åˆüÿÿÿÿJ$68255232-9c9f-4310-82f3-3e26569c6165
+
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡J$61d5c09c-35c4-4e1b-8536-ea119c743b23
+•
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿJ$e7737fc0-584e-4e8d-b0c2-90da2e665e13
+l	java:S106–"+Replace this use of System.out by a logger.(ò¤áÿûÿÿÿÿJ$8db3d46e-58ab-41a8-99ee-f38d5fe370ef
+l	java:S106™"+Replace this use of System.out by a logger.(½ğöÈıÿÿÿÿJ$1732cd3a-d042-4145-8fbf-6d60ceaa972a
+l	java:S106­"+Replace this use of System.out by a logger.(ñ¢©·şÿÿÿÿJ$f9aacd9e-4116-484d-b9ff-89187819154b
+g	java:S106°"+Replace this use of System.out by a logger.(¤Õï«J$b32bccc7-15fb-492f-832d-79c243c8c120
+l	java:S106İ"+Replace this use of System.out by a logger.(Éâ…ºıÿÿÿÿJ$e0d68bac-ae79-4a44-b07d-38dc351951e2

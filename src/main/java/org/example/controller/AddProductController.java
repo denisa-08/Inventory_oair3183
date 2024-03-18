@@ -28,8 +28,7 @@ public class AddProductController implements Initializable, Controller {
     private Stage stage;
     private Parent scene;
     private ObservableList<Part> addParts = FXCollections.observableArrayList();
-    private String errorMessage = new String();
-    private int productId;
+    private String errorMessage;
 
     private InventoryService service;
     
@@ -113,7 +112,6 @@ public class AddProductController implements Initializable, Controller {
     private void displayScene(ActionEvent event, String source) throws IOException {
         stage = (Stage)((Button)event.getSource()).getScene().getWindow();
         FXMLLoader loader= new FXMLLoader(getClass().getResource(source));
-        //scene = FXMLLoader.load(getClass().getResource(source));
         scene = loader.load();
         Controller ctrl=loader.getController();
         ctrl.setService(service);
@@ -170,11 +168,13 @@ public class AddProductController implements Initializable, Controller {
         alert.setHeaderText("Confirm Cancelation");
         alert.setContentText("Are you sure you want to cancel adding product?");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
-            System.out.println("Ok selected. Product addition canceled.");
-            displayScene(event, "/fxml/MainScreen.fxml");
-        } else {
-            System.out.println("Cancel clicked.");
+        if(result.isPresent()) {
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Ok selected. Product addition canceled.");
+                displayScene(event, "/fxml/MainScreen.fxml");
+            } else {
+                System.out.println("Cancel clicked.");
+            }
         }
     }
     
