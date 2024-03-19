@@ -1,6 +1,10 @@
 package org.example.model;
 
 public class Validator {
+    public Validator() {
+
+    }
+
     private static String errorMessage;
     /**
      * Generate an error message for invalid values in a part
