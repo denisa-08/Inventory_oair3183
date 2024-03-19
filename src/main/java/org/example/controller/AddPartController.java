@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import org.example.model.Part;
+import org.example.model.Validator;
 import org.example.service.InventoryService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -155,7 +156,7 @@ public class AddPartController implements Initializable, Controller {
         errorMessage = "";
         
         try {
-            errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
+            errorMessage = Validator.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max));
             if(errorMessage.length() > 0) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error Adding Part!");
