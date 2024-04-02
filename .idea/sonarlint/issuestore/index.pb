@@ -69,3 +69,11 @@ S
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 Å
 Q.idea/sonarlint/securityhotspotstore/b/8/b83710f4feec08427085d7279e6bf258b5f7104a,e\0\e04cab36b8a8f34ca109d42366bb57ed0eab818a
+^
+.src/main/java/org/example/model/Validator.java,5\c\5ca042c66755f613186456ef76a88e89b3156bb9
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+V
+&src/test/java/org/example/AppTest.java,4\3\438c56474209176629917f1aaaac4e1cf31f765e
+k
+;src/test/java/org/example/service/InventoryServiceTest.java,6\6\66905967b4bb14c6d5bfb029d29b8cd3f9546100
