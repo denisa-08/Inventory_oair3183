@@ -43,7 +43,8 @@ public class Inventory {
     public Product lookupProduct(String searchItem) {
         boolean isFound = false;
         for(Product p: products) {
-            if(p.getName().contains(searchItem) || (p.getProductId()+"").equals(searchItem)) return p;
+            if(p.getName().contains(searchItem) || (p.getProductId()+"").equals(searchItem))
+                return p;
             isFound = true;
         }
         if(!isFound) {
@@ -145,7 +146,6 @@ public class Inventory {
         autoProductId++;
         return autoProductId;
     }
-
 
     public void setAutoPartId(int id){
         autoPartId=id;
