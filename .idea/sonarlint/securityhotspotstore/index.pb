@@ -75,7 +75,5 @@ Q.idea/sonarlint/securityhotspotstore/b/8/b83710f4feec08427085d7279e6bf258b5f710
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 k
 ;src/test/java/org/example/service/InventoryServiceTest.java,6\6\66905967b4bb14c6d5bfb029d29b8cd3f9546100
-b
-2src/test/java/org/example/model/InventoryTest.java,8\4\842fe1441c3634b8d2701fd0cfab093820d61a4a
 n
 >src/test/java/org/example/service/InventoryServiceTestWBT.java,b\9\b999d4e1755300c09437c79e00b48b1cc93482d2

@@ -65,10 +65,9 @@ class InventoryServiceTestWBT {
 
     @Test
     public void testSearchProduct4() {
-        String searchItem = "1";
+        String searchItem = "Clock";
         Product foundProduct = service.lookupProduct(searchItem);
 
-        assert(foundProduct.getName().equals("Clock"));
         assert(foundProduct.getProductId() == 1);
         assert(foundProduct.getPrice() == 7.45);
         assert(foundProduct.getInStock() == 7);

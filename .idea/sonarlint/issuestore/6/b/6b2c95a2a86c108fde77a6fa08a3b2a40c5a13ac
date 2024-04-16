@@ -2,9 +2,9 @@
 Y
 java:S1643"Use a StringBuilder instead.(ŠÑ‡àJ$081d562f-6a2e-4d84-ae92-2a63574f4774
 i
-java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ãÈˆ¦8ö¥ÛÍê1
-i
 java:S2095N"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ãÈˆ¦8÷¥ÛÍê1
+i
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ãÈˆ¦8ö¥ÛÍê1
 j
 java:S2095ƒ"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ù»ı8÷¥ÛÍê1
 |	java:S125"<This block of commented-out lines of code should be removed.(§¨Ö¿úÿÿÿÿJ$d2fa6108-a5a4-4b22-a037-1b461aebee6d
