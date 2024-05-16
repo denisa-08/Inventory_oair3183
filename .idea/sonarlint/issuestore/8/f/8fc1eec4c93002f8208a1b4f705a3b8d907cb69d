@@ -1,0 +1,20 @@
+
+½
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ê—J$03e0363d-7d5e-40a3-b98d-e5410c4cc1c4
+Â
+java:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÌÎ”•ûÿÿÿÿJ$541ba89c-3fdb-4d15-9cd8-532d520101b6
+œ
+java:S1450!"[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(¥åˆüÿÿÿÿJ$cb4ce510-2fea-4a82-80e4-11503aafe868
+–
+java:S1450#"URemove the "partId" field and declare it as a local variable in the relevant methods.(•›™âıÿÿÿÿJ$263d684c-c0f1-42d1-9f97-d1f9f8741fe8
+
+java:S1450"TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡J$13de7b34-b96d-402b-8de2-f9ef1c693989
+•
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿJ$90184c00-c73a-4c44-aabc-4d3e9557bef6
+g	java:S106£"+Replace this use of System.out by a logger.(§ª¬J$5c95d36f-4614-4b61-8237-ac21a1fb8d28
+l	java:S106¦"+Replace this use of System.out by a logger.(ùÿèÁøÿÿÿÿJ$f33a11a3-ea34-469a-a183-0fc73c60dc4a
+|
+java:S1117³":Rename "partId" which hides the field declared at line 35.(ÂçšÇúÿÿÿÿJ$acf87a31-116d-4f62-803d-29cc02b96306
+l	java:S106Î"+Replace this use of System.out by a logger.(Ï³ÌùÿÿÿÿJ$7779f352-a0f1-4d61-af92-fc03948d60b0
+k
+java:S1068#"*Remove this unused "partId" private field.(•›™âıÿÿÿÿJ$538aedc3-a10e-402b-adeb-93c3b7e7cdfd

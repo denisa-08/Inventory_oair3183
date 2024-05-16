@@ -161,7 +161,7 @@ public class InventoryRepository {
 
 	public void addProduct(Product product){
 		inventory.addProduct(product);
-		writeAll();
+		//writeAll();
 	}
 
 	public int getAutoPartId(){
