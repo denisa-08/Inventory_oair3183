@@ -1,7 +1,10 @@
 package org.example.repository;
 
 import org.example.model.InhousePart;
+import org.example.model.Part;
 import org.example.repository.InventoryRepository;
+import org.example.service.InventoryService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.example.model.Inventory;
@@ -9,38 +12,40 @@ import org.example.model.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.times;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.*;
 
 public class InventoryRepositoryTest {
+    Product product;
+    InventoryRepository repo;
+    ObservableList<Part> partList;
+    ObservableList<Product> products;
 
+    @BeforeEach
+    void setUp(){
+        product = mock(Product.class);
+        repo = new InventoryRepository();
+        partList = FXCollections.observableArrayList();
+        products = FXCollections.observableArrayList();
+        repo.getInventory().setAllParts(partList);
+        repo.getInventory().setProducts(products);
+
+        System.out.println("Inital length: "+ products.size());
+    }
     @Test
     public void testAddProduct() {
-        // Arrange
-        InventoryRepository repository = new InventoryRepository();
-        Inventory mockInventory = Mockito.mock(Inventory.class);
-        Product product = new Product(1, "Test Product", 100.0, 10, 1, 20, FXCollections.observableArrayList(new InhousePart(14, "part1", 0.5, 4, 2, 10, 1))); // Define a test product
+        repo.addProduct(product);
 
-        // Stubbing mock behavior
-        Mockito.when(mockInventory.getAutoProductId()).thenReturn(1); // Stub auto product ID
-        Mockito.when(mockInventory.getProducts()).thenReturn(FXCollections.observableArrayList()); // Stub getProducts() to return an empty ObservableList
-        Mockito.doNothing().when(mockInventory).addProduct(product); // Stub addProduct() to do nothing
+        assertEquals(1, repo.getAllProducts().size());
+    }
 
-        ObservableList<Product> expectedProducts = FXCollections.observableArrayList(product);
-        assertEquals(expectedProducts, mockInventory.getProducts()); // Verify that the product is present in the inventory's pro
+    @Test
+    public void testDeleteProduct() {
+        repo.addProduct(product);
+        assertEquals(1, repo.getAllProducts().size());
 
-        repository.setInventory(mockInventory); // Set mock inventory in repository
-
-        // Act
-        repository.addProduct(product);
-
-        // Assert
-        Mockito.verify(mockInventory, times(1)).addProduct(product); // Verify that addProduct method of mock inventory was called once with any Product object
-        //Mockito.verify(repository, times(1)).writeAll(); // Verify that writeAll method of repository was called once
-
-        //ObservableList<Product> expectedProducts = FXCollections.observableArrayList(product);
-        //assertEquals(expectedProducts, mockInventory.getProducts()); // Verify that the product is present in the inventory's product list
+        repo.deleteProduct(product);
+        assertEquals(0, repo.getAllProducts().size());
     }
 }

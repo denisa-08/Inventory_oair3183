@@ -68,7 +68,7 @@ public class InventoryServiceTest {
 
         // Assert
         assert(service.getAllProducts().size() == size + 1);
-        Product addedProduct = service.lookupProduct("product2");
+        Product addedProduct = service.lookupProduct("product5");
         assert(addedProduct.getPrice() == 1);
         assert(addedProduct.getMin() == 5);
         assert(addedProduct.getMax() == 20);

@@ -14,11 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class InventoryServiceTestMockito {
-
     InventoryRepository repo;
-
     InventoryService serviceUnit;
-
     ObservableList<Part> partList;
     ObservableList<Product> products;
 
@@ -32,8 +29,7 @@ class InventoryServiceTestMockito {
     }
 
     @Test
-    @DisplayName("S - ServiceMockitoTest01")
-    void serviceMockitoTest1() throws Exception {
+    void serviceAddValidProduct() throws Exception {
         Part part = mock(Part.class);
         partList.add(part);
         System.out.println(partList.size());
@@ -48,8 +44,7 @@ class InventoryServiceTestMockito {
     }
 
     @Test
-    @DisplayName("S - ServiceMockitoTest02")
-    void serviceMockitoTest2() {
+    void serviceAddInvalidProduct() {
         Part part = mock(Part.class);
         partList.add(part);
         System.out.println(partList.size());
