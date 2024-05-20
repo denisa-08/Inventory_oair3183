@@ -1,18 +1,16 @@
-package org.example.integrare;
+package org.example.service;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.example.model.Part;
 import org.example.model.Product;
 import org.example.repository.InventoryRepository;
-import org.example.service.InventoryService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 class TestERS {
     Product product;

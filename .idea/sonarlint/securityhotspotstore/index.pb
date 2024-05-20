@@ -77,3 +77,17 @@ k
 ;src/test/java/org/example/service/InventoryServiceTest.java,6\6\66905967b4bb14c6d5bfb029d29b8cd3f9546100
 n
 >src/test/java/org/example/service/InventoryServiceTestWBT.java,b\9\b999d4e1755300c09437c79e00b48b1cc93482d2
+`
+0src/test/java/org/example/model/ProductTest.java,b\a\ba788d9d4f793812df02a34d76e26663ac3173e7
+r
+Bsrc/test/java/org/example/service/InventoryServiceTestMockito.java,b\2\b209a7e9c179abd624e247686dd40abe683918e2
+h
+8src/test/java/org/example/integrare/ServiceRepoTest.java,a\6\a637d7d4f3d6e7162a6a399e80386cfdbaedd79f
+`
+0src/test/java/org/example/integrare/TestERS.java,3\6\36a3c7291a34a4023fa99ce52fa31b27fcb869e8
+q
+Asrc/test/java/org/example/repository/InventoryRepositoryTest.java,d\a\daff49fd80be154f043be37c82bc0c35a692ba57
+f
+6src/test/java/org/example/service/ServiceRepoTest.java,6\b\6b9a94bbd5adfad304906ddc9af7924c5adbede7
+^
+.src/test/java/org/example/service/TestERS.java,4\4\44529ab84300bfbaec0370b467edd34d8dc25b82
