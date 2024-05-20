@@ -23,7 +23,7 @@ class InventoryServiceTestWBT {
         service = new InventoryService(repo);
     }
 
-    @DisplayName("Test search product")
+
     @Test
     public void testSearchProduct1() {
         String searchItem = "product2";

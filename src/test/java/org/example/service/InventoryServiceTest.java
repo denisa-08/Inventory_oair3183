@@ -21,7 +21,6 @@ class InventoryServiceTest {
         service = new InventoryService(repo);
     }
 
-    @DisplayName("Test add product")
     @Test
     public void testAddValidProduct() {
         // Arrange
@@ -102,7 +101,6 @@ class InventoryServiceTest {
     }
 
     @Test
-    @Tag("invalid")
     public void testAddInvalidProduct() {
         // Arrange
         String name = "product2";
@@ -124,7 +122,6 @@ class InventoryServiceTest {
     }
 
     @Test
-    @Tag("invalid")
     public void testAddInvalidProduct2() {
         // Arrange
         String name = "product3";
@@ -146,7 +143,6 @@ class InventoryServiceTest {
     }
 
     @Test
-    @Tag("invalid")
     public void testAddInvalidProduct3() {
         // Arrange
         String name = "product4";
@@ -168,7 +164,6 @@ class InventoryServiceTest {
     }
 
     @Test
-    @Tag("invalid")
     public void testAddInvalidProduct4() {
         // Arrange
         String name = "product6";
