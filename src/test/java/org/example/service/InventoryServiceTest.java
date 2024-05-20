@@ -9,7 +9,7 @@ import org.example.model.Product;
 import org.example.repository.InventoryRepository;
 import org.junit.jupiter.api.*;
 
-public class InventoryServiceTest {
+class InventoryServiceTest {
     private InventoryService service;
     private InventoryRepository repo;
 
