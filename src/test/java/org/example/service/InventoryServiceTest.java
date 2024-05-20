@@ -14,7 +14,7 @@ class InventoryServiceTest {
     private InventoryRepository repo;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         repo = new InventoryRepository();
         repo.addPart(new InhousePart(14, "part1", 0.5, 4, 2, 10, 1));
         repo.addPart(new InhousePart(15, "part2", 0.5, 5, 3, 8, 2));
@@ -22,7 +22,7 @@ class InventoryServiceTest {
     }
 
     @Test
-    public void testAddValidProduct() {
+    void testAddValidProduct() {
         // Arrange
         String name = "product1";
         double price = 15;
@@ -49,7 +49,7 @@ class InventoryServiceTest {
 
 
     @Test
-    public void testAddValidProduct2() {
+    void testAddValidProduct2() {
         // Arrange
         String name = "product5";
         double price = 1;
@@ -75,7 +75,7 @@ class InventoryServiceTest {
     }
 
     @Test
-    public void testAddValidProduct3() {
+    void testAddValidProduct3() {
         // Arrange
         String name = "product7";
         double price = 10;
@@ -101,7 +101,7 @@ class InventoryServiceTest {
     }
 
     @Test
-    public void testAddInvalidProduct() {
+    void testAddInvalidProduct() {
         // Arrange
         String name = "product2";
         double price = 10;
@@ -122,7 +122,7 @@ class InventoryServiceTest {
     }
 
     @Test
-    public void testAddInvalidProduct2() {
+    void testAddInvalidProduct2() {
         // Arrange
         String name = "product3";
         double price = 0;
@@ -143,7 +143,7 @@ class InventoryServiceTest {
     }
 
     @Test
-    public void testAddInvalidProduct3() {
+    void testAddInvalidProduct3() {
         // Arrange
         String name = "product4";
         double price = 0;
@@ -164,7 +164,7 @@ class InventoryServiceTest {
     }
 
     @Test
-    public void testAddInvalidProduct4() {
+    void testAddInvalidProduct4() {
         // Arrange
         String name = "product6";
         double price = 7;

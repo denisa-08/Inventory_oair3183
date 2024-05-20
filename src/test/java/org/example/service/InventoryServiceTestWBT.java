@@ -18,14 +18,14 @@ class InventoryServiceTestWBT {
     private InventoryRepository repo;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         repo = new InventoryRepository();
         service = new InventoryService(repo);
     }
 
 
     @Test
-    public void testSearchProduct1() {
+    void testSearchProduct1() {
         String searchItem = "product2";
         Product foundProduct = service.lookupProduct(searchItem);
 
@@ -39,7 +39,7 @@ class InventoryServiceTestWBT {
     }
 
     @Test
-    public void testSearchProduct2() {
+    void testSearchProduct2() {
         String searchItem = "prd";
         Product foundProduct = service.lookupProduct(searchItem);
 
@@ -47,7 +47,7 @@ class InventoryServiceTestWBT {
     }
 
     @Test
-    public void testSearchProduct3() {
+    void testSearchProduct3() {
         Inventory inventory = new Inventory();
         repo.setInventory(inventory);
         service = new InventoryService(repo);
@@ -64,7 +64,7 @@ class InventoryServiceTestWBT {
     }
 
     @Test
-    public void testSearchProduct4() {
+    void testSearchProduct4() {
         String searchItem = "Clock";
         Product foundProduct = service.lookupProduct(searchItem);
 
@@ -77,7 +77,7 @@ class InventoryServiceTestWBT {
     }
 
     @Test
-    public void testSearchProduct5() {
+    void testSearchProduct5() {
         String searchItem = "products4";
         Product foundProduct = service.lookupProduct(searchItem);
 
@@ -91,7 +91,7 @@ class InventoryServiceTestWBT {
     }
 
     @Test
-    public void testSearchProduct6() {
+    void testSearchProduct6() {
         String searchItem = "10";
         Product foundProduct = service.lookupProduct(searchItem);
 
