@@ -30,12 +30,12 @@ class InventoryServiceTestWBT {
         Product foundProduct = service.lookupProduct(searchItem);
 
         assert(foundProduct.getName().equals("product2"));
-        assert(foundProduct.getProductId() == 6);
-        assert(foundProduct.getPrice() == 1.0);
-        assert(foundProduct.getInStock() == 10);
-        assert(foundProduct.getMin() == 5);
-        assert(foundProduct.getMax() == 20);
-        assert(foundProduct.getAssociatedParts().size() == 2);
+        assert(foundProduct.getProductId() == 2);
+        assert(foundProduct.getPrice() == 12.34);
+        assert(foundProduct.getInStock() == 12);
+        assert(foundProduct.getMin() == 1);
+        assert(foundProduct.getMax() == 12);
+        assert(foundProduct.getAssociatedParts().size() == 1);
     }
 
     @Test
