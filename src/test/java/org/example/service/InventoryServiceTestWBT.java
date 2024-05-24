@@ -29,13 +29,13 @@ class InventoryServiceTestWBT {
         String searchItem = "product2";
         Product foundProduct = service.lookupProduct(searchItem);
 
-        assert(foundProduct.getName().equals("product2"));
-        assert(foundProduct.getProductId() == 2);
-        assert(foundProduct.getPrice() == 12.34);
-        assert(foundProduct.getInStock() == 12);
-        assert(foundProduct.getMin() == 1);
-        assert(foundProduct.getMax() == 12);
-        assert(foundProduct.getAssociatedParts().size() == 1);
+        assertEquals("product2", foundProduct.getName());
+        assertEquals(2, foundProduct.getProductId());
+        assertEquals(12.34, foundProduct.getPrice());
+        assertEquals(12, foundProduct.getInStock());
+        assertEquals(1, foundProduct.getMin());
+        assertEquals(12, foundProduct.getMax());
+        assertEquals(1, foundProduct.getAssociatedParts().size());
     }
 
     @Test
@@ -43,7 +43,7 @@ class InventoryServiceTestWBT {
         String searchItem = "prd";
         Product foundProduct = service.lookupProduct(searchItem);
 
-        assert(foundProduct == null);
+        assertNull(foundProduct);
     }
 
     @Test
@@ -53,13 +53,13 @@ class InventoryServiceTestWBT {
         service = new InventoryService(repo);
 
         Product foundProduct = service.lookupProduct("prd");
-        assert(foundProduct.getName() == null);
-        assert(foundProduct.getProductId() == 0);
-        assert(foundProduct.getPrice() == 0.0);
-        assert(foundProduct.getInStock() == 0);
-        assert(foundProduct.getMin() == 0);
-        assert(foundProduct.getMax() == 0);
-        assert(foundProduct.getAssociatedParts() == null);
+        assertNull(foundProduct.getName());
+        assertEquals(0, foundProduct.getProductId());
+        assertEquals(0.0 ,foundProduct.getPrice());
+        assertEquals(0, foundProduct.getInStock());
+        assertEquals(0, foundProduct.getMin());
+        assertEquals(0, foundProduct.getMax());
+        assertNull(foundProduct.getAssociatedParts());
 
     }
 
@@ -68,12 +68,12 @@ class InventoryServiceTestWBT {
         String searchItem = "Clock";
         Product foundProduct = service.lookupProduct(searchItem);
 
-        assert(foundProduct.getProductId() == 1);
-        assert(foundProduct.getPrice() == 7.45);
-        assert(foundProduct.getInStock() == 7);
-        assert(foundProduct.getMin() == 2);
-        assert(foundProduct.getMax() == 20);
-        assert(foundProduct.getAssociatedParts().size() == 3);
+        assertEquals(1, foundProduct.getProductId());
+        assertEquals(7.45, foundProduct.getPrice());
+        assertEquals(7, foundProduct.getInStock());
+        assertEquals(2, foundProduct.getMin());
+        assertEquals(20, foundProduct.getMax());
+        assertEquals(3, foundProduct.getAssociatedParts().size());
     }
 
     @Test
@@ -81,13 +81,13 @@ class InventoryServiceTestWBT {
         String searchItem = "products4";
         Product foundProduct = service.lookupProduct(searchItem);
 
-        assert(foundProduct.getName().equals("products4"));
-        assert(foundProduct.getProductId() == 4);
-        assert(foundProduct.getPrice() == 11.0);
-        assert(foundProduct.getInStock() == 2);
-        assert(foundProduct.getMin() == 1);
-        assert(foundProduct.getMax() == 10);
-        assert(foundProduct.getAssociatedParts().size() == 4);
+        assertEquals("products4", foundProduct.getName());
+        assertEquals(4, foundProduct.getProductId());
+        assertEquals(11.0, foundProduct.getPrice());
+        assertEquals(2, foundProduct.getInStock());
+        assertEquals(1, foundProduct.getMin());
+        assertEquals(10, foundProduct.getMax());
+        assertEquals(4, foundProduct.getAssociatedParts().size());
     }
 
     @Test
@@ -95,13 +95,13 @@ class InventoryServiceTestWBT {
         String searchItem = "10";
         Product foundProduct = service.lookupProduct(searchItem);
 
-        assert(foundProduct.getName().equals("product5"));
-        assert(foundProduct.getProductId() == 10);
-        assert(foundProduct.getPrice() == 1.0);
-        assert(foundProduct.getInStock() == 10);
-        assert(foundProduct.getMin() == 5);
-        assert(foundProduct.getMax() == 20);
-        assert(foundProduct.getAssociatedParts().size() == 2);
+        assertEquals("product5", foundProduct.getName());
+        assertEquals(10, foundProduct.getProductId());
+        assertEquals(1.0, foundProduct.getPrice());
+        assertEquals(10, foundProduct.getInStock());
+        assertEquals(5, foundProduct.getMin());
+        assertEquals(20, foundProduct.getMax());
+        assertEquals(2, foundProduct.getAssociatedParts().size());
     }
 
 }

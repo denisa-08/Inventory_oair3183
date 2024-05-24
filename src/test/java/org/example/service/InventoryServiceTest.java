@@ -16,8 +16,8 @@ class InventoryServiceTest {
     @BeforeEach
     void setUp() {
         repo = new InventoryRepository();
-        repo.addPart(new InhousePart(14, "part1", 0.5, 4, 2, 10, 1));
-        repo.addPart(new InhousePart(15, "part2", 0.5, 5, 3, 8, 2));
+        //repo.addPart(new InhousePart(14, "part1", 0.5, 4, 2, 10, 1));
+        //repo.addPart(new InhousePart(15, "part2", 0.5, 5, 3, 8, 2));
         service = new InventoryService(repo);
     }
 
@@ -39,12 +39,12 @@ class InventoryServiceTest {
         service.addProduct(name, price, inStock, min, max, addParts);
 
         // Assert
-        assert(service.getAllProducts().size() == size + 1);
+        assertEquals(size + 1, service.getAllProducts().size());
         Product addedProduct = service.lookupProduct("product1");
-        assert(addedProduct.getPrice() == 15);
-        assert(addedProduct.getMin() == 2);
-        assert(addedProduct.getMax() == 10);
-        assert(addedProduct.getInStock() == 5);
+        assertEquals(15, addedProduct.getPrice());
+        assertEquals(2, addedProduct.getMin());
+        assertEquals(10, addedProduct.getMax());
+        assertEquals(5, addedProduct.getInStock());
     }
 
 
@@ -66,12 +66,12 @@ class InventoryServiceTest {
         service.addProduct(name, price, inStock, min, max, addParts);
 
         // Assert
-        assert(service.getAllProducts().size() == size + 1);
+        assertEquals(size+1, service.getAllProducts().size());
         Product addedProduct = service.lookupProduct("product5");
-        assert(addedProduct.getPrice() == 1);
-        assert(addedProduct.getMin() == 5);
-        assert(addedProduct.getMax() == 20);
-        assert(addedProduct.getInStock() == 10);
+        assertEquals(1, addedProduct.getPrice());
+        assertEquals(5, addedProduct.getMin());
+        assertEquals(20, addedProduct.getMax());
+        assertEquals(10, addedProduct.getInStock());
     }
 
     @Test
@@ -92,12 +92,12 @@ class InventoryServiceTest {
         service.addProduct(name, price, inStock, min, max, addParts);
 
         // Assert
-        assert(service.getAllProducts().size() == size + 1);
+        assertEquals(size+1, service.getAllProducts().size());
         Product addedProduct = service.lookupProduct("product7");
-        assert(addedProduct.getPrice() == 10);
-        assert(addedProduct.getMin() == 2);
-        assert(addedProduct.getMax() == 15);
-        assert(addedProduct.getInStock() == 15);
+        assertEquals(10, addedProduct.getPrice());
+        assertEquals(2, addedProduct.getMin());
+        assertEquals(15, addedProduct.getMax());
+        assertEquals(15, addedProduct.getInStock());
     }
 
     @Test
